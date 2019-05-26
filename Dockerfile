@@ -9,6 +9,9 @@ EXPOSE 80 81
 #Simple startup script to aviod some issues observed with container restart
 ADD run-httpd.sh /run-httpd.sh
 RUN chmod -v +x /run-httpd.sh
+RUN mkdir /etc/httpd/sites-available
+RUN mkdir /etc/httpd/sites-enabled
+
 
 #Copy config file across
 COPY ./sites-available /etc/httpd/sites-available
