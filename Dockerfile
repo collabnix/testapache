@@ -1,5 +1,4 @@
 FROM centos:latest
-Maintainer vect0r
 LABEL Vendor="CentOS"
 
 RUN yum -y update && yum clean all
