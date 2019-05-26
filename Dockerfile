@@ -17,5 +17,6 @@ RUN mkdir /etc/httpd/sites-enabled
 COPY ./sites-available /etc/httpd/sites-available
 COPY ./sites-enabled /etc/httpd/sites-enabled
 COPY ./breakout.com.conf /etc/httpd/sites-available
+COPY ./index.html /var/www/html
 
 CMD ["/run-httpd.sh"]
